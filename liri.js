@@ -9,7 +9,7 @@ var config = require("dotenv").config();
 
 
 var Twitter = require('twitter');
-//var Spotify = require('node-spotify-api');
+var Spotify = require('node-spotify-api');
 var request = require('request');
 var fs = require('fs');
 var keys = require('./keys.js');
@@ -20,19 +20,34 @@ var keys = require('./keys.js');
 //Taking  action 
 var action = process.argv[2];
 //Telling the action what to do
-var argument = "";
+var argument =  process.argv[3];
+
+
+
 
 
     if(action === "my-tweets"){
         // node liri.js my-tweets
         // This will show your last 20 tweets and when they were created at in your terminal/bash window.
-        console.log("get-tweets");
+        console.log("Tweeter is Running ..." +"\n" + 
+       '__________________________________________________________________');
         getTweets();
 
-    }else if(action ==="spotify"){
+    }else if(action ==="spotify-this-song"){
 
-        console.log("A song");
-        //Call Spottify Func
+        console.log("Spotyfy is Running ..." + "\n" + 
+        "___________________________________________________________________");
+        
+           
+           /////////////I AM SO PROUD OF THIS 2 lines LOL ///////////
+if(!argument && action === "spotify-this-song" ){
+    argument = "The Sign";
+}
+///////////////////KEEPING IT CLEAN AND TIDE ////////////
+           getSongInfo();
+
+        
+     
 
     }else if(action === "movie-this"){
         //Call getMovie Func
@@ -46,25 +61,77 @@ var argument = "";
         console.log("do what it says");
 
     }
+/////////////////////////START GET TWEETS FUNCTION////////////////////
 ///get Tweets function
 function getTweets(){
     //should then be able to access your keys information like so
 //I am sure it is not in a right place. I'll figure it out
     var client = new Twitter(keys.twitter);
 
-
-    var params = {q: '@BenyaminRogie', count: 1};
+    
+    var params = {screen_name: '@benjizasion', count: 20, trim_user:true};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
       if (!error) {
-      //  console.log(tweets);
-        console.log(tweets[0].text); //TESTING
+      //FOR LOOP IN ORDER TO LOOPING THROUGH THE RESULTS
+       for(var i = 0 ; i < tweets.length; i++ ){
+        console.log(tweets[i].text +"\n" + "Created at:" +tweets[i].created_at+ "\n" + 
+        "\n---------------------------------------------" ); //TESTING
+       }
       }
     });
     }
+//////////////////////////END GET TWEETS FUNCTION///////////////////////////
     
+////////////////START SPOTYFY FUNCTION///////////////
 ///Get song Function
+
+   function getSongInfo(){
+
+
+   var spotify = new Spotify(keys.spotify);
+   
+    
+      spotify.search({ type:'track', query:argument, limit:7},
+      function(err, data) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+        var songInfo = data.tracks.items;
+
+       
+       // Do something with 'data' 
+       for(var i = 0; i < songInfo.length;i++ ){
+
+         var songName = songInfo[i].name;
+        var albumName = songInfo[i].album.name;
+        var previewLink= songInfo[i].external_urls.spotify;
+        var artistName= songInfo[i].artists[0].name;
+
+
+       console.log(
+           "Name of the Artist: " + artistName +"\n" + 
+            "Name of the Album: " + albumName + "\n" +
+             "Name of the Song: " + songName + "\n" +
+             "Go to this link to listen: " + previewLink + "\n" +
+       "----------------------------------------------------------------");
+       
+       }
+       
+
+       //show
+//        Artist(s)
+// The song's name
+// A preview link of the song from Spotify
+// The album that the song is from
+//       console.log(data.tracks); 
+      });
+    }
+////////////////END SPOTIFY FUNCTION///////////////
+
+
+
 ///get movie function
-///do what it says fuunction
+///do what it says function
 
 
 
