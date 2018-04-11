@@ -14,13 +14,24 @@ var request = require('request');
 var fs = require('fs');
 var keys = require('./keys.js');
 
-//var spotify = new Spotify(keys.spotify);
 
 
 //Taking  action 
 var action = process.argv[2];
-//Telling the action what to do
-var argument =  process.argv[3];
+var argument = process.argv[3];
+//var argument= [];
+//What ever comes after Action takes as argument
+// for(var i = 3; i < process.argv.length; i++){
+//     var argumentTaken =  [process.argv[i]];
+//     var argumentGiven = argumentTaken.join(argumentTaken).join("  ");
+
+//     //.join(" + ");
+//     console.log(argumentGiven);
+// }
+  
+
+
+
 
 
 
@@ -69,12 +80,13 @@ function getTweets(){
     var client = new Twitter(keys.twitter);
 
     
-    var params = {screen_name: '@benjizasion', count: 20, trim_user:true};
+    var params = {screen_name: '@benjizasion', count: 21, trim_user:true};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
       if (!error) {
       //FOR LOOP IN ORDER TO LOOPING THROUGH THE RESULTS
        for(var i = 0 ; i < tweets.length; i++ ){
-        console.log(tweets[i].text +"\n" + "Created at:" +tweets[i].created_at+ "\n" + 
+        console.log(i+1 +""+
+        "\n\n"+"Status: "+"\n"+tweets[i].text +"\n\n" + "Created at: \n" + tweets[i].created_at+ "\n" + 
         "\n---------------------------------------------" ); //TESTING
        }
       }
@@ -91,7 +103,7 @@ function getTweets(){
    var spotify = new Spotify(keys.spotify);
    
     
-      spotify.search({ type:'track', query:argument, limit:7},
+      spotify.search({ type:'track', query:argument, limit:10},
       function(err, data) {
         if (err) {
           return console.log('Error occurred: ' + err);
@@ -107,12 +119,14 @@ function getTweets(){
         var previewLink= songInfo[i].external_urls.spotify;
         var artistName= songInfo[i].artists[0].name;
 
-
+        //Console logging the shits
+        
        console.log(
-           "Name of the Artist: " + artistName +"\n" + 
-            "Name of the Album: " + albumName + "\n" +
-             "Name of the Song: " + songName + "\n" +
-             "Go to this link to listen: " + previewLink + "\n" +
+           i+1 +""+
+           "\n\n" + "Name of the Artist: " + artistName +"\n\n" + 
+            "Name of the Album: " + albumName + "\n\n" +
+             "Name of the Song: " + songName + "\n\n" +
+             "Go to this link to listen: " + previewLink + "\n\n" +
        "----------------------------------------------------------------");
        
        }
@@ -131,6 +145,9 @@ function getTweets(){
 
 
 ///get movie function
+//Start get movie function////////////////////
+
+//End get movie function////////////////////
 ///do what it says function
 
 
