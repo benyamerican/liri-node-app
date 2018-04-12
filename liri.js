@@ -166,9 +166,11 @@ var params = {
 omdbApi.get(params, function(err, data) {
     console.log("\n\n Your Result About the movie " +'"' + argument +'"'+
     " \n\n________________________________________________________________________________________________\n");
-    if(!data){
+    if(err){
+        return console.log("ERROR: " + err);
+    }else if(!data){
        return console.log("\nMovie not Found");
-    }
+    }else{
    // console.log(data);
     // process response...
     console.log(
@@ -190,6 +192,7 @@ omdbApi.get(params, function(err, data) {
     "Actors in the movie: " +data.Actors +
     "\n\n________________________________________________________________________________________________");
 
+    }
    
 });
 
