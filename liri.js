@@ -1,3 +1,4 @@
+//import { stringify } from "querystring";
 
 // At the top of the liri.js file, add code to read and set any environment variables
 //  with the dotenv package:
@@ -49,19 +50,14 @@ var argument = process.argv[3];
 
         console.log("Spotyfy is Running ..." + "\n" + 
         "________________________________________________________________________________________________");
-                   /////////////I AM SO PROUD OF THIS 2 lines LOL ///////////
-if(action === "spotify-this-song" && !argument){
-    argument = "The Sign";
-}
+                  /////////////I AM SO PROUD OF THIS 2 lines LOL ///////////
+                  if(action === "spotify-this-song" && !argument){
+                      argument = "The Sign";
+                    }
 ///////////////////KEEPING IT CLEAN AND TIDE ////////////
            getSongInfo();
-           
 
-
-        
-     
-
-    }else if(action === "movie-this"){
+        }else if(action === "movie-this"){
         //Call getMovie Func
         console.log("Movie is running ... \n"+
         "________________________________________________________________________________________________");
@@ -75,7 +71,8 @@ if(action === "spotify-this-song" && !argument){
         console.log("What?? What do you want??Say something then or I dont know what to do");
     }else{
         //Call do something func
-        console.log("do what it says");
+        console.log("\n\ndo what it says ...\n\n________________________________________________________________________________________________");
+        writeThis();
 
     }
 /////////////////////////START GET TWEETS FUNCTION////////////////////
@@ -91,17 +88,16 @@ function getTweets(){
       if (!error) {
       //FOR LOOP IN ORDER TO LOOPING THROUGH THE RESULTS
        for(var i = 0 ; i < tweets.length; i++ ){
-        console.log(i+1 +""+
-        "\n\n"+"Status: "+"\n"+tweets[i].text +"\n\n" + "Created at: \n" + tweets[i].created_at+ "\n" + 
-        "\n------------------------------------------------------------------------------------------------" ); //TESTING
-           
+           var tweetArr = i+1 +""+
+           "\n\n"+"Status: "+"\n"+tweets[i].text +"\n\n" + "Created at: \n" + tweets[i].created_at+ "\n" + 
+           "\n------------------------------------------------------------------------------------------------" ;
+        console.log(tweetArr);
+           writeThis(tweetArr);
     }
-      }
-    });
-    }
+      }});}
 //////////////////////////END GET TWEETS FUNCTION///////////////////////////
     
-////////////////START SPOTYFY FUNCTION///////////////
+////////////////START SPOTIFY FUNCTION///////////////
 ///Get song Function
 
    function getSongInfo(){
@@ -117,7 +113,6 @@ function getTweets(){
         }
         var songInfo = data.tracks.items;
 
-       
        // Do something with 'data' 
        for(var i = 0; i < songInfo.length;i++ ){
 
@@ -127,26 +122,18 @@ function getTweets(){
         var artistName= songInfo[i].artists[0].name;
 
         //Console logging the shits
-        
-       console.log(
-           i+1 +""+
-           "\n\n" + "Name of the Artist: " + artistName +"\n\n" + 
-            "Name of the Album: " + albumName + "\n\n" +
-             "Name of the Song: " + songName + "\n\n" +
-             "Go to this link to listen: " + previewLink + "\n\n" +
-       "------------------------------------------------------------------------------------------------");
-       
-       }
-       
+      
+       var songsArr=
+       i+1 +""+
+       "\n\n" + "Name of the Artist: " + artistName +"\n\n" + 
+        "Name of the Album: " + albumName + "\n\n" +
+         "Name of the Song: " + songName + "\n\n" +
+         "Go to this link to listen: " + previewLink + "\n\n" +
+   "------------------------------------------------------------------------------------------------";
+   console.log(songsArr);
+   writeThis(songsArr);
+       }});}
 
-       //show
-//        Artist(s)
-// The song's name
-// A preview link of the song from Spotify
-// The album that the song is from
-//       console.log(data.tracks); 
-      });
-    }
 ////////////////END SPOTIFY FUNCTION///////////////
 
 
@@ -173,31 +160,62 @@ omdbApi.get(params, function(err, data) {
     }else{
    // console.log(data);
     // process response...
-    console.log(
+    var movieArr=
     // * Title of the movie.
-    "Title of the movie: "+data.Title  +"\n\n"+    
+    "{\nTitle of This movie: "+data.Title  +"\n\n"+    
     // * Year the movie came out.
-    "Year the movie came out: "+data.Year   +"\n\n"+    
+    "Year This Movie was Released: "+data.Year   +"\n\n"+    
     // * IMDB Rating of the movie.
-    "IMDB Rating of the movie: "+data.imdbRating  +"\n\n"+
+    "IMDB Rating: "+data.imdbRating  +"\n\n"+
     // * Rotten Tomatoes Rating of the movie.
-    //"Rotten Tomatoes Rating of the movie: "+data.Rating[2].Source +"\n\n"+
+    "Rotten Tomatoes Rating: "+data.Ratings[1]. Value +"\n\n"+
     // * Country where the movie was produced.
-    "Country where the movie was produced: "+data.Country +"\n\n"+
+    "Country where This movie was produced: "+data.Country +"\n\n"+
     // * Language of the movie.
-    "Language of the movie: "+data.Language +"\n\n"+
+    "Language of This movie: "+data.Language +"\n\n"+
     // * Plot of the movie.
-    "Plot of the movie: "+data.Plot +"\n\n"+
+    "Plot of This movie: "+data.Plot +"\n\n"+
     // * Actors in the movie.
-    "Actors in the movie: " +data.Actors +
-    "\n\n________________________________________________________________________________________________");
+    "Actors in This movie: " +data.Actors +
+    "\n}\n\n________________________________________________________________________________________________"; 
+    console.log(movieArr);
+    writeThis(movieArr);
+       }});}
 
+//End get movie function////////////////////
+
+//Start Writing do what it says 
+function writeThis(parm){
+
+    var timeStamp = new Date();
+   
+
+    if(parm){
+        var toWrite = ["\n\nAt This Time: " + timeStamp +"\n\nUser Searched For: "+ action +", "+ argument +  "\n\nAnd received These Result back:\n\n " + parm + 
+        "\n\n________________________________________________________________________________________________"];
+      }else{
+          toWrite = ["\n\nAt This Time: " + timeStamp +"\n\nUser Searched For: "+ action +", "+ argument +  
+          "\n\nUser Did Not received any result!!\n\n________________________________________________________________________________________________ "];
+        
     }
    
-});
+   
+        
+
+    fs.appendFile("log.txt", toWrite , function(err) {
+
+        // If the code experiences any errors it will log the error to the console.
+        if (err) {
+          return console.log(err);
+        }
+      
+        // Otherwise, it will print: "movies.txt was updated!"
+        console.log("movies.txt was updated!");
+    
+      });
+  
 
 }
-//End get movie function////////////////////
 ///do what it says function
 
 
