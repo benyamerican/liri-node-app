@@ -1,0 +1,29 @@
+
+
+At This Time: Thu Apr 12 2018 05:53:00 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: movie-this, The-Wall
+
+And received These Result back:
+
+ {
+Title of This movie: Pink Floyd: The Wall
+
+Year This Movie was Released: 1982
+
+IMDB Rating: 8.0
+
+Rotten Tomatoes Rating: 70%
+
+Country where This movie was produced: UK
+
+Language of This movie: English
+
+Plot of This movie: A confined but troubled rock star descends into madness in the midst of his physical and social isolation from everyone.
+
+Actors in This movie: Bob Geldof, Christine Hargreaves, James Laurenson, Eleanor David
+}
+
+________________________________________________________________________________________________
+
+________________________________________________________________________________________________

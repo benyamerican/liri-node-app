@@ -206,16 +206,13 @@ function writeThis(parm){
 
         // If the code experiences any errors it will log the error to the console.
         if (err) {
-          return console.log(err);
+          return console.log("Error: " + err);
         }
       
         // Otherwise, it will print: "movies.txt was updated!"
-        console.log("movies.txt was updated!");
+        console.log("log.txt was updated!");
     
-      });
-  
-
-}
+      });}
 ///do what it says function
 
 
