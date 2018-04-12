@@ -122,6 +122,8 @@ function getTweets(){
         var artistName= songInfo[i].artists[0].name;
 
         //Console logging the shits
+
+
       
        var songsArr=
        i+1 +""+
@@ -198,10 +200,6 @@ function writeThis(parm){
           "\n\nUser Did Not received any result!!\n\n________________________________________________________________________________________________ "];
         
     }
-   
-   
-        
-
     fs.appendFile("log.txt", toWrite , function(err) {
 
         // If the code experiences any errors it will log the error to the console.
