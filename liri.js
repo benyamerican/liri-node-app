@@ -13,6 +13,7 @@ var Spotify = require('node-spotify-api');
 var request = require('request');
 var fs = require('fs');
 var keys = require('./keys.js');
+var omdbApi = require('omdb-client');
 
 
 
@@ -41,28 +42,33 @@ var argument = process.argv[3];
         // node liri.js my-tweets
         // This will show your last 20 tweets and when they were created at in your terminal/bash window.
         console.log("Tweeter is Running ..." +"\n" + 
-       '__________________________________________________________________');
+       '________________________________________________________________________________________________');
         getTweets();
 
     }else if(action ==="spotify-this-song"){
 
         console.log("Spotyfy is Running ..." + "\n" + 
-        "___________________________________________________________________");
-        
-           
-           /////////////I AM SO PROUD OF THIS 2 lines LOL ///////////
-if(!argument && action === "spotify-this-song" ){
+        "________________________________________________________________________________________________");
+                   /////////////I AM SO PROUD OF THIS 2 lines LOL ///////////
+if(action === "spotify-this-song" && !argument){
     argument = "The Sign";
 }
 ///////////////////KEEPING IT CLEAN AND TIDE ////////////
            getSongInfo();
+           
+
 
         
      
 
     }else if(action === "movie-this"){
         //Call getMovie Func
-        console.log("movie");
+        console.log("Movie is running ... \n"+
+        "________________________________________________________________________________________________");
+        if(action === "movie-this" && !argument){
+            argument = "Mr. Nobody";
+        }
+        getMovie();
 
     }else if(!action){
         //Talk shit 
@@ -87,8 +93,9 @@ function getTweets(){
        for(var i = 0 ; i < tweets.length; i++ ){
         console.log(i+1 +""+
         "\n\n"+"Status: "+"\n"+tweets[i].text +"\n\n" + "Created at: \n" + tweets[i].created_at+ "\n" + 
-        "\n---------------------------------------------" ); //TESTING
-       }
+        "\n------------------------------------------------------------------------------------------------" ); //TESTING
+           
+    }
       }
     });
     }
@@ -127,7 +134,7 @@ function getTweets(){
             "Name of the Album: " + albumName + "\n\n" +
              "Name of the Song: " + songName + "\n\n" +
              "Go to this link to listen: " + previewLink + "\n\n" +
-       "----------------------------------------------------------------");
+       "------------------------------------------------------------------------------------------------");
        
        }
        
@@ -146,7 +153,47 @@ function getTweets(){
 
 ///get movie function
 //Start get movie function////////////////////
+//var omdbApiKey = "36d1a550";
+//var queryUrl = "http://www.omdbapi.com/?i=tt3896198&apikey=36d1a550";
 
+function getMovie(){
+    var omdbApi = require('omdb-client');
+ 
+var params = {
+    apiKey: '36d1a550',
+    title: argument,   
+}
+omdbApi.get(params, function(err, data) {
+    console.log("\n\n Your Result About the movie " +'"' + argument +'"'+
+    " \n\n________________________________________________________________________________________________\n");
+    if(!data){
+       return console.log("\nMovie not Found");
+    }
+   // console.log(data);
+    // process response...
+    console.log(
+    // * Title of the movie.
+    "Title of the movie: "+data.Title  +"\n\n"+    
+    // * Year the movie came out.
+    "Year the movie came out: "+data.Year   +"\n\n"+    
+    // * IMDB Rating of the movie.
+    "IMDB Rating of the movie: "+data.imdbRating  +"\n\n"+
+    // * Rotten Tomatoes Rating of the movie.
+    //"Rotten Tomatoes Rating of the movie: "+data.Rating[2].Source +"\n\n"+
+    // * Country where the movie was produced.
+    "Country where the movie was produced: "+data.Country +"\n\n"+
+    // * Language of the movie.
+    "Language of the movie: "+data.Language +"\n\n"+
+    // * Plot of the movie.
+    "Plot of the movie: "+data.Plot +"\n\n"+
+    // * Actors in the movie.
+    "Actors in the movie: " +data.Actors +
+    "\n\n________________________________________________________________________________________________");
+
+   
+});
+
+}
 //End get movie function////////////////////
 ///do what it says function
 
