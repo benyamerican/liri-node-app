@@ -35,3 +35,429 @@ User Searched For: Hellowwzzz, SHADADADADADO
 User Did Not received any result!!
 
 ________________________________________________________________________________________________ 
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 1
+
+Name of the Artist: Led Zeppelin
+
+Name of the Album: Physical Graffiti
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/2nVHqZbOGkKWzlcy1aMbE7
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 2
+
+Name of the Artist: Led Zeppelin
+
+Name of the Album: Physical Graffiti (Deluxe Edition)
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/6Vjk8MNXpQpi0F4BefdTyq
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 3
+
+Name of the Artist: Led Zeppelin
+
+Name of the Album: Mothership (Remastered)
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/5v2vkoTamoisazJFanHJjk
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 4
+
+Name of the Artist: KSHMR
+
+Name of the Album: Club Life, Vol. 4 - New York City
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/3B9vTRw3RacMdUCr2NQDMl
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 5
+
+Name of the Artist: Adam Pascal
+
+Name of the Album: The New Standards
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/2orb0ZajCjSacm9owjjwLI
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 6
+
+Name of the Artist: Escala
+
+Name of the Album: Escala
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/56eIkBG17wkZxOWwUZ59eW
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 7
+
+Name of the Artist: Led Zeppelin
+
+Name of the Album: Physical Graffiti
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/1MmxrJ35NzNxHjPdyKDhut
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 8
+
+Name of the Artist: Shankar Mahadevan
+
+Name of the Album: Mission Kashmir (Original Motion Picture Soundtrack)
+
+Name of the Song: Bumbro (From "Mission Kashmir")
+
+Go to this link to listen: https://open.spotify.com/track/114EjUlcKajU9Syfk5n0a5
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 9
+
+Name of the Artist: Rockabye Baby!
+
+Name of the Album: Lullaby Renditions of Led Zeppelin
+
+Name of the Song: Kashmir
+
+Go to this link to listen: https://open.spotify.com/track/3oB2iAK5xFWOvUMPgJaDbi
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:32:42 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: spotify-this-song, Kashmir
+
+And received These Result back:
+
+ 10
+
+Name of the Artist: Led Zeppelin
+
+Name of the Album: Celebration Day
+
+Name of the Song: Kashmir - Live: O2 Arena, London - December 10, 2007
+
+Go to this link to listen: https://open.spotify.com/track/4k4tFDl5rmRAA7L7gIjBTI
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 1
+
+Status: 
+I'm God. I had a son, he was also me. He was a man though. I had him killed. He came back. 
+I did it to save you from how I made you. Yeap
+
+Created at: 
+Wed Apr 11 12:33:23 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 2
+
+Status: 
+I'll be famous one day. But for now, I'm stuck in Coding_Bootcamp with a bunch of morons.
+
+Created at: 
+Wed Apr 11 12:30:14 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 3
+
+Status: 
+"Holly shit, it's double_helix" 
+Rosalind Franklin
+
+Created at: 
+Wed Apr 11 12:28:19 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 4
+
+Status: 
+Another TEST this should be 8th one
+
+Created at: 
+Wed Apr 11 08:56:33 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 6
+
+Status: 
+7  BALA BALA BALA
+
+Created at: 
+Wed Apr 11 08:15:51 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 7
+
+Status: 
+Just in case no one told you today :
+Good morning 
+You are beautiful 
+I love you 
+Nice butt
+
+Created at: 
+Wed Apr 11 07:32:25 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 9
+
+Status: 
+Don't have faith, it won't be tested
+
+Created at: 
+Wed Apr 11 07:31:59 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 8
+
+Status: 
+Me: where do you want to eat? 
+Her: wherever you pick is fine. 
+
+Narator: wherever he picked was not fine.
+
+Created at: 
+Wed Apr 11 07:32:10 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 5
+
+Status: 
+TESTING TESTING  TESTING
+
+Created at: 
+Wed Apr 11 08:17:08 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 10
+
+Status: 
+Everything I like is either too expensive, causes cancer or wont text me back
+
+Created at: 
+Wed Apr 11 07:31:45 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 11
+
+Status: 
+If I'm ever on life support, 
+unplug me then plug me back in see if that works. Thanks
+
+Created at: 
+Wed Apr 11 07:31:29 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
+
+At This Time: Sat Apr 14 2018 04:44:06 GMT-0700 (US Mountain Standard Time)
+
+User Searched For: my-tweets, undefined
+
+And received These Result back:
+
+ 12
+
+Status: 
+Pretty sure "Scam Likely" has a crush on me.
+
+Created at: 
+Wed Apr 11 07:31:15 +0000 2018
+
+------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________
