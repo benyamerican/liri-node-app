@@ -1,14 +1,4 @@
-//import { stringify } from "querystring";
-
-// At the top of the liri.js file, add code to read and set any environment variables
-//  with the dotenv package:
-
-
 var config = require("dotenv").config();
-
-
-
-
 var Twitter = require('twitter');
 var Spotify = require('node-spotify-api');
 var request = require('request');
@@ -20,24 +10,14 @@ var omdbApi = require('omdb-client');
 
 //Taking  action 
 var action = process.argv[2];
-var argument = process.argv[3];
-//var argument= [];
-//What ever comes after Action takes as argument
-// for(var i = 3; i < process.argv.length; i++){
-//     var argumentTaken =  [process.argv[i]];
-//     var argumentGiven = argumentTaken.join(argumentTaken).join("  ");
+//Taking the argument
+var argumentArr = [];
 
-//     //.join(" + ");
-//     console.log(argumentGiven);
-// }
-  
-
-
-
-
-
-
-
+for(var j = 3; j < process.argv.length;j++){
+    argumentArr.push(process.argv[j]);  
+}
+var argument =  argumentArr.join(" ");
+console.log(argument);
 
     if(action === "my-tweets"){
         // node liri.js my-tweets
@@ -91,9 +71,12 @@ function getTweets(){
            var tweetArr = i+1 +""+
            "\n\n"+"Status: "+"\n"+tweets[i].text +"\n\n" + "Created at: \n" + tweets[i].created_at+ "\n" + 
            "\n------------------------------------------------------------------------------------------------" ;
-        console.log(tweetArr);
+      
+           console.log(tweetArr);
            writeThis(tweetArr);
+            
     }
+ 
       }});}
 //////////////////////////END GET TWEETS FUNCTION///////////////////////////
     
@@ -160,6 +143,7 @@ omdbApi.get(params, function(err, data) {
     }else if(!data){
        return console.log("\nMovie not Found");
     }else{
+        
    // console.log(data);
     // process response...
     var movieArr=
@@ -170,7 +154,7 @@ omdbApi.get(params, function(err, data) {
     // * IMDB Rating of the movie.
     "IMDB Rating: "+data.imdbRating  +"\n\n"+
     // * Rotten Tomatoes Rating of the movie.
-    "Rotten Tomatoes Rating: "+data.Ratings[1]. Value +"\n\n"+
+    "Rotten Tomatoes Rating: "+ data.Ratings[1].Value  +"\n\n"+
     // * Country where the movie was produced.
     "Country where This movie was produced: "+data.Country +"\n\n"+
     // * Language of the movie.
@@ -182,6 +166,7 @@ omdbApi.get(params, function(err, data) {
     "\n}\n\n________________________________________________________________________________________________"; 
     console.log(movieArr);
     writeThis(movieArr);
+  
        }});}
 
 //End get movie function////////////////////
@@ -217,4 +202,5 @@ function writeThis(parm){
 
 
  
+
 
